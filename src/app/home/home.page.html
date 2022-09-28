@@ -1,20 +1,61 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2" class="ion-text-center">
+        <img src="assets/logo.png" />
+      </ion-col>
+      <ion-col size="10">
+        <ion-item mode="ios">
+          <ion-icon name="search" slot="start"></ion-icon>
+          <ion-input
+            mode="ios"
+            type="text"
+            placeholder="Search Product or Brand"
+          ></ion-input>
+        </ion-item>
+        <!-- <ion-searchbar
+          class="search"
+          mode="ios"
+          placeholder="Search Product or Brand"
+        ></ion-searchbar> -->
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-row>
+            <ion-col>
+              <img src="assets/card1.png" />
+            </ion-col>
+            <ion-col>
+              <div>Canagan Dental</div>
+              <p>Get Up To 40% OFF</p>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-start">
+        <p>Trending now</p>
+      </ion-col>
+      <ion-col class="ion-text-end"><p>See all</p></ion-col>
+    </ion-row>
+    <ion-row>
+      <div *ngFor="let item of sqare">
+        <img [src]="item.img" />
+        <p>{{item.text}}</p>
+        <p>{{item.for}}</p>
+      </div>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-start">
+        <p>Browse pet types</p>
+      </ion-col>
+      <ion-col class="ion-text-end"><p>See all</p></ion-col>
+    </ion-row>
+    <ion-row>
+      <div></div>
+    </ion-row>
+  </ion-grid>
 </ion-content>
