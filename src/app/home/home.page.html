@@ -1,33 +1,30 @@
 <ion-content [fullscreen]="true">
   <ion-grid>
-    <ion-row>
+    <ion-row class="ion-align-items-center">
       <ion-col size="2" class="ion-text-center">
         <img src="assets/logo.png" />
       </ion-col>
       <ion-col size="10">
-        <ion-item mode="ios">
+        <!-- <ion-item mode="ios">
           <ion-icon name="search" slot="start"></ion-icon>
           <ion-input
             mode="ios"
             type="text"
             placeholder="Search Product or Brand"
           ></ion-input>
-        </ion-item>
-        <!-- <ion-searchbar
+        </ion-item> -->
+        <ion-searchbar
           class="search"
-          mode="ios"
+          mode="md"
           placeholder="Search Product or Brand"
-        ></ion-searchbar> -->
+        ></ion-searchbar>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-card>
-          <ion-row>
-            <ion-col>
-              <img src="assets/card1.png" />
-            </ion-col>
-            <ion-col>
+        <ion-card class="offercard">
+          <ion-row class="ion-align-items-center">
+            <ion-col push="6" size="6">
               <div>Canagan Dental</div>
               <p>Get Up To 40% OFF</p>
             </ion-col>
