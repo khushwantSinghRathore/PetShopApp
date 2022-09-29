@@ -24,7 +24,12 @@
       </div>
     </ion-row>
     <ion-row>
-      <ion-col size="6" *ngFor="let item of prod" class="ion-text-center">
+      <ion-col
+        size="5.5"
+        push="0.5"
+        *ngFor="let item of prod"
+        class="ion-text-center"
+      >
         <div
           [ngStyle]="{'background': item.background, 'border': item.border}"
           class="prodcard"

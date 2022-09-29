@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -41,5 +42,9 @@ export class HomePage {
       color: 'rgba(83, 92, 177,0.15)',
     },
   ];
-  constructor() {}
+  constructor(private route: Router) {}
+
+  toProduct() {
+    this.route.navigate(['products']);
+  }
 }

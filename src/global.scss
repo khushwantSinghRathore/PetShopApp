@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: "brandon";
-  src: url("./assets/fonts/brandon.otf");
+  src: url("./assets/fonts/BrandonGrotesque-Medium.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -57,4 +57,19 @@ ion-content {
 ::-webkit-scrollbar {
   width: 0;
   height: 8px;
+}
+
+ion-button {
+  --border-radius: 12px;
+}
+
+.swiper-pagination-bullet {
+  width: 5px;
+  height: 5px;
+}
+
+.swiper-pagination-bullet-active {
+  width: 20px;
+  height: 5px;
+  border-radius: 8px;
 }

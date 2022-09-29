@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'tabnav',
+    redirectTo: 'products',
     pathMatch: 'full',
   },
   {
@@ -19,11 +19,13 @@ const routes: Routes = [
   },
   {
     path: 'explore',
-    loadChildren: () => import('./explore/explore.module').then( m => m.ExplorePageModule)
+    loadChildren: () =>
+      import('./explore/explore.module').then((m) => m.ExplorePageModule),
   },
   {
     path: 'products',
-    loadChildren: () => import('./products/products.module').then( m => m.ProductsPageModule)
+    loadChildren: () =>
+      import('./products/products.module').then((m) => m.ProductsPageModule),
   },
 ];
 
