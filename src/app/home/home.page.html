@@ -23,6 +23,7 @@
     <ion-row>
       <ion-col>
         <ion-card class="offercard">
+          <img src="assets/card1.png" />
           <ion-row class="ion-align-items-center">
             <ion-col push="6" size="6">
               <div>Canagan Dental</div>
@@ -32,27 +33,49 @@
         </ion-card>
       </ion-col>
     </ion-row>
-    <ion-row>
+    <ion-row class="ion-align-items-center">
       <ion-col class="ion-text-start">
-        <p>Trending now</p>
+        <p class="heading1">Trending now</p>
       </ion-col>
-      <ion-col class="ion-text-end"><p>See all</p></ion-col>
+      <ion-col class="ion-text-end"> <p class="subhd1">See all</p></ion-col>
     </ion-row>
     <ion-row>
-      <div *ngFor="let item of sqare">
-        <img [src]="item.img" />
-        <p>{{item.text}}</p>
-        <p>{{item.for}}</p>
-      </div>
+      <ion-slides
+        [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }"
+      >
+        <ion-slide *ngFor="let item of sqare" class="slidecard"
+          ><div>
+            <img [src]="item.img" />
+            <p class="heading">{{item.text}}</p>
+            <p class="subheading">{{item.for}}</p>
+          </div>
+        </ion-slide>
+      </ion-slides>
     </ion-row>
-    <ion-row>
+    <ion-row class="ion-align-items-center" style="margin-top: 2vh">
       <ion-col class="ion-text-start">
-        <p>Browse pet types</p>
+        <p class="heading1">Browse pet types</p>
       </ion-col>
-      <ion-col class="ion-text-end"><p>See all</p></ion-col>
+      <ion-col class="ion-text-end"><p class="subhd1">See all</p></ion-col>
     </ion-row>
     <ion-row>
-      <div></div>
+      <ion-slides
+        [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }"
+      >
+        <ion-slide
+          *ngFor="let item of pets"
+          class="petscard"
+          [ngStyle]="{'background': item.color}"
+        >
+          <ion-row class="ion-align-items-center">
+            <img [src]="item.img" />
+            <ion-col> </ion-col>
+            <ion-col>
+              <p>{{ item.text }}</p>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+      </ion-slides>
     </ion-row>
   </ion-grid>
 </ion-content>

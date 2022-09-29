@@ -17,9 +17,14 @@ ion-grid {
 .offercard {
   background-color: #23bda8;
   border-radius: 12px;
-  background-image: url("../../assets/card1.png");
-  height: 148px;
+  backdrop-filter: blur(19px);
+  background-image: linear-gradient(to bottom left, #6dc298, #23bda8);
+  height: 125px;
   margin: 2vh 0px;
+  img {
+    position: absolute;
+    bottom: 0px;
+  }
   ion-row {
     height: 100%;
     div {
@@ -31,7 +36,57 @@ ion-grid {
       color: white;
       font-size: smaller;
       font-weight: normal;
-      margin-top: 0%;
+      margin: 0%;
     }
+  }
+}
+
+.slidecard {
+  margin-bottom: 4vh;
+  width: 40vw;
+  margin-inline-end: 4vw;
+
+  p {
+    margin: 0%;
+    font-size: medium;
+    font-weight: 200;
+    text-align: start;
+  }
+
+  .heading {
+    font-size: 16px;
+    letter-spacing: 0.1px;
+    line-height: 18px;
+  }
+
+  .subheading {
+    margin-top: 2%;
+    font-size: small;
+    color: #7c7c7c !important;
+  }
+}
+
+.heading1 {
+  margin: 5% 0%;
+  font-size: x-large;
+  font-weight: 400 !important;
+}
+
+.subhd1 {
+  margin: 5% 0%;
+  color: var(--ion-color-primary);
+}
+
+.petscard {
+  border-radius: 12px;
+  width: 40vw;
+  margin-inline-end: 4vw;
+  ion-row {
+    width: 100%;
+  }
+  img {
+    position: absolute;
+    bottom: 0px;
+    left: 5px;
   }
 }

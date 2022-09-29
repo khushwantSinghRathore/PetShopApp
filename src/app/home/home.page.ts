@@ -23,5 +23,23 @@ export class HomePage {
       for: 'Shop Green Elk',
     },
   ];
+
+  pets = [
+    {
+      img: 'assets/dog.png',
+      text: 'Dog',
+      color: 'rgba(248, 164, 76,0.15)',
+    },
+    {
+      img: 'assets/cat.png',
+      text: 'Cat',
+      color: 'rgba(83, 177, 117,0.15)',
+    },
+    {
+      img: 'assets/dog.png',
+      text: 'Dog',
+      color: 'rgba(83, 92, 177,0.15)',
+    },
+  ];
   constructor() {}
 }
