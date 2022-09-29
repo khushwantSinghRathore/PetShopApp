@@ -14,6 +14,11 @@ const routes: Routes = [
           import('../home/home.module').then((m) => m.HomePageModule),
       },
       {
+        path: 'explore',
+        loadChildren: () =>
+          import('../explore/explore.module').then((m) => m.ExplorePageModule),
+      },
+      {
         path: '',
         redirectTo: '/tabnav/home',
         pathMatch: 'full',

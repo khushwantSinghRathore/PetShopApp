@@ -17,6 +17,14 @@ const routes: Routes = [
     loadChildren: () =>
       import('./tabnav/tabnav.module').then((m) => m.TabnavPageModule),
   },
+  {
+    path: 'explore',
+    loadChildren: () => import('./explore/explore.module').then( m => m.ExplorePageModule)
+  },
+  {
+    path: 'products',
+    loadChildren: () => import('./products/products.module').then( m => m.ProductsPageModule)
+  },
 ];
 
 @NgModule({

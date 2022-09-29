@@ -1,0 +1,39 @@
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <h1>Explore Categories</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-searchbar
+          class="search"
+          mode="md"
+          placeholder="Search Product or Brand"
+        ></ion-searchbar>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-align-items-center">
+      <div class="chipdiv">
+        <ion-chip [outline]="true"> All </ion-chip>
+        <ion-chip [outline]="true" color="primary"> Dog </ion-chip>
+        <ion-chip [outline]="true"> Cat </ion-chip>
+        <ion-chip [outline]="true"> Small Animal </ion-chip>
+        <ion-chip [outline]="true">Bird</ion-chip>
+      </div>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6" *ngFor="let item of prod" class="ion-text-center">
+        <div
+          [ngStyle]="{'background': item.background, 'border': item.border}"
+          class="prodcard"
+        >
+          <div style="height: 125px"><img [src]="item.img" /></div>
+
+          <p>{{ item.text }}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
