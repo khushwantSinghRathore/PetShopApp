@@ -1,0 +1,53 @@
+ion-grid {
+  padding: 0vw 4vw;
+  height: 100%;
+}
+
+.bottombtn {
+  width: 100%;
+  padding: 0px;
+
+  ion-button {
+    height: 4em;
+  }
+}
+
+ion-slides {
+  height: 35vh;
+  --bullet-background: var(--ion-color-medium);
+  --bullet-background-active: var(--ion-color-primary);
+  --progress-bar-background-active: var(--ion-color-primary);
+}
+
+.head1 {
+  font-size: x-large;
+}
+
+.head2 {
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.subhead {
+  font-size: medium;
+  color: var(--ion-color-medium);
+}
+
+.allbtn {
+  margin-top: 2vh;
+}
+
+.star {
+  padding: 0.5vw;
+}
+
+.options {
+  .left {
+    padding-left: 4vw;
+  }
+
+  .undrln {
+    color: var(--ion-color-primary);
+    text-decoration: underline;
+  }
+}

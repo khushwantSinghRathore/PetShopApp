@@ -1,0 +1,81 @@
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="2" class="ion-text-center">
+        <img src="assets/logo.png" />
+      </ion-col>
+      <ion-col size="10">
+        <!-- <ion-item mode="ios">
+          <ion-icon name="search" slot="start"></ion-icon>
+          <ion-input
+            mode="ios"
+            type="text"
+            placeholder="Search Product or Brand"
+          ></ion-input>
+        </ion-item> -->
+        <ion-searchbar
+          class="search"
+          mode="md"
+          placeholder="Search Product or Brand"
+        ></ion-searchbar>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="offercard" (click)="toProduct()">
+          <img src="assets/card1.png" />
+          <ion-row class="ion-align-items-center">
+            <ion-col push="6" size="6">
+              <div>Canagan Dental</div>
+              <p>Get Up To 40% OFF</p>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-align-items-center">
+      <ion-col class="ion-text-start">
+        <p class="heading1">Trending now</p>
+      </ion-col>
+      <ion-col class="ion-text-end"> <p class="subhd1">See all</p></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-slides
+        [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }"
+      >
+        <ion-slide *ngFor="let item of sqare" class="slidecard"
+          ><div>
+            <img [src]="item.img" />
+            <p class="heading">{{item.text}}</p>
+            <p class="subheading">{{item.for}}</p>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+    <ion-row class="ion-align-items-center" style="margin-top: 2vh">
+      <ion-col class="ion-text-start">
+        <p class="heading1">Browse pet types</p>
+      </ion-col>
+      <ion-col class="ion-text-end"><p class="subhd1">See all</p></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-slides
+        [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }"
+      >
+        <ion-slide
+          *ngFor="let item of pets"
+          class="petscard"
+          [ngStyle]="{'background': item.color}"
+        >
+          <ion-row class="ion-align-items-center">
+            <img [src]="item.img" />
+            <ion-col> </ion-col>
+            <ion-col>
+              <p>{{ item.text }}</p>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+  </ion-grid>
+</ion-content>

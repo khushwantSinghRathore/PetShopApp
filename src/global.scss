@@ -1,0 +1,75 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+  font-family: "brandon";
+  src: url("./assets/fonts/BrandonGrotesque-Medium.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+ion-app {
+  --ion-font-family: "brandon" !important;
+  font-family: "brandon" !important;
+}
+
+ion-content {
+  --background: white !important;
+}
+
+.search {
+  padding: 0%;
+  padding-left: 2vw;
+  --background: #f2f3f2;
+  --border-radius: 7.5px;
+  --color: #7c7c7c;
+  --placeholder-color: var(--color);
+  --icon-color: #1d1d1b;
+  --box-shadow: 0px;
+  --placeholder-font-weight: 300;
+  height: 52px !important;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 8px;
+}
+
+ion-button {
+  --border-radius: 12px;
+}
+
+.swiper-pagination-bullet {
+  width: 5px;
+  height: 5px;
+}
+
+.swiper-pagination-bullet-active {
+  width: 20px;
+  height: 5px;
+  border-radius: 8px;
+}

@@ -1,0 +1,23 @@
+ion-chip {
+  padding: 19px;
+}
+
+.chipdiv {
+  white-space: nowrap;
+  margin-left: 3vw;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  flex-wrap: nowrap;
+  overflow-x: scroll !important;
+  overflow-y: hidden;
+}
+
+.prodcard {
+  border-radius: 12px;
+  height: 100%;
+
+  p {
+    position: relative;
+    bottom: 5px;
+  }
+}
